@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <a *ngIf="hero" [routerLink]="['/detail', hero.id]">
+    <h2>{{hero.name}} details!</h2>
+    <div><label>id: {{hero.id}}</label></div>
+    <div>
+      <label>name: {{hero.name}}</label>
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </div>
+    <button (click)="goBack()">Back</button>
+  </a>
+</body>
+</html>
